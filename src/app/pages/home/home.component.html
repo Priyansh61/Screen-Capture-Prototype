@@ -1,0 +1,13 @@
+<h1>loda</h1>
+<div #screen>
+    <h1>Hey!</h1>
+    <p>some content</p>
+</div>
+
+<button (click)="capture()">Take</button>
+<button (click)="showImage()">Show</button>
+
+<img [src]="imageSource" alt="Image Source">
+
+<button (click)="editImage()">Edit Image</button>
+<app-image-modal *ngIf="imageDetails" [imageDetails]="imageDetails"></app-image-modal>
