@@ -18,9 +18,9 @@ export class DialogService {
       'top':'0%',
     }
     dialogConfig.width = '50%';
-    dialogConfig.height = '50%';
+    dialogConfig.height = '100%%';
     dialogConfig.maxWidth = '1000px';
-    dialogConfig.maxHeight = '600px';
+    dialogConfig.maxHeight = '70vh';
     dialogConfig.panelClass = 'custom-modalbox';
     dialogConfig.backdropClass = 'custom-backdrop';
     dialogConfig.hasBackdrop = true;

@@ -1,11 +1,22 @@
-<div #screen class="full">
-    <h1>Hey!</h1>
-    <p>some content</p>
+<!-- Design the layout to take screenshot and show the image in a modal. -->
 
-
-    <button (click)="capture()">Take</button>
-    <button (click)="showImage()">Show</button>
-
-    <button (click)="editImage()">Edit Image</button>
-    <app-image-modal *ngIf="imageDetails" [imageDetails]="imageDetails"></app-image-modal>
+<div #screen class="img-container">
+    <mat-toolbar></mat-toolbar>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Home</h1>
+                <p>This is the home page.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Utility to capture screenshot -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <button mat-raised-button color="primary" (click)="capture()">Capture Screen</button>
+                <button mat-raised-button color="primary" (click)="showImage()">Show Screen</button>
+            </div>
+        </div>
+    </div>
 </div>
