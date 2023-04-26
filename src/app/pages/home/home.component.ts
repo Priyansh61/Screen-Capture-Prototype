@@ -5,6 +5,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { NgxCaptureService } from 'ngx-capture';
 import { tap } from 'rxjs';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
+import { DialogService } from '../services/dialog.service';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
   img:any = null ;
   imageDetails: any = null;
   constructor(private captureService: NgxCaptureService, private http: HttpClient,
-    private sanitizer: DomSanitizer) { }
+    private sanitizer: DomSanitizer,
+    private dialogService: DialogService) { }
 
     @ViewChild(ImageModalComponent) imageModal!: ImageModalComponent;
 
@@ -67,6 +69,7 @@ export class HomeComponent implements OnInit {
 
   showImage() {
     this.imageSource = this.sanitizer.bypassSecurityTrustResourceUrl(this.img);
+    this.dialogService.openImageModal(this.imageSource);
   }
 
   editImage() {

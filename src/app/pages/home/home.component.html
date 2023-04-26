@@ -1,12 +1,11 @@
-<div #screen>
+<div #screen class="full">
     <h1>Hey!</h1>
     <p>some content</p>
+
+
+    <button (click)="capture()">Take</button>
+    <button (click)="showImage()">Show</button>
+
+    <button (click)="editImage()">Edit Image</button>
+    <app-image-modal *ngIf="imageDetails" [imageDetails]="imageDetails"></app-image-modal>
 </div>
-
-<button (click)="capture()">Take</button>
-<button (click)="showImage()">Show</button>
-
-<img [src]="imageSource" alt="Image Source">
-
-<button (click)="editImage()">Edit Image</button>
-<app-image-modal *ngIf="imageDetails" [imageDetails]="imageDetails"></app-image-modal>

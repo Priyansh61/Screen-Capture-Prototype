@@ -7,6 +7,8 @@ import { NgxCaptureModule } from 'ngx-capture';
 import { HomeComponent } from './pages/home/home.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ImageModalComponent } from './pages/image-modal/image-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared-module/material-module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ImageModalComponent } from './pages/image-modal/image-modal.component';
     BrowserModule,
     AppRoutingModule,
     NgxCaptureModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
